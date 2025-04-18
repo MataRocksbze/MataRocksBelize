@@ -1,0 +1,46 @@
+fragment HomeRestaurant on HomeRestaurant {
+  stage
+  publishedAt
+  updatedAt
+  createdAt
+  remoteId: id
+  title1
+  title2White
+  title3Gold
+  content {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}

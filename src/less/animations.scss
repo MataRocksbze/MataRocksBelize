@@ -1,0 +1,224 @@
+@keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.3);
+    }
+  }
+  body {
+    margin: 0;
+   // overflow-x: hidden;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    width:100%;
+  }
+  .expanded-container{
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .all-button{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    margin-top: 20px!important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content;
+    margin: 0 auto;
+    border-top: 1px solid rgb(255, 210, 141);
+    border-bottom: 1px solid rgb(255, 210, 141);
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    &:hover{
+        background-color: rgb(255, 210, 141, .9);
+        text-decoration: none;
+        color: #051114!important;
+    }
+  }
+
+  .secondary-cont {
+    padding-top: 28px;
+    &{
+      @media(min-width: 576px) and (max-width: 767px){
+        padding-top: 26px;
+
+         }
+     }
+     @media(max-width: 426px){
+      padding-top: 5px;
+  } 
+}
+
+a.book-button{
+                                                                        
+  color: #fff;
+  text-decoration: none;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+  border: 1px solid #fff;
+  transition: .2s ease-in-out;
+  padding: 5px 10px 5px 10px;
+  
+  z-index: 99999;
+
+  &:hover{
+      border-color: #FFD28D;
+      background-color: #FFD28D;
+      color: #051114;
+      font-weight: bold;
+  }
+}
+
+.content-header{
+  // margin-top: -37px;
+   position: relative;
+   z-index: 0;
+   @media(min-width: 992px){
+       .gatsby-image-wrapper.gatsby-image-wrapper-constrained {
+           height: 520px;
+       }
+   }
+   @media(max-width: 991px) and (min-width: 576px){
+    .gatsby-image-wrapper.gatsby-image-wrapper-constrained {
+        height: 325px;
+    }
+   }
+   .header-overlay{
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       z-index: 1;
+       background-image: linear-gradient(rgba(0,0,0,0.6) 40%,rgba(0,0,0,0.4));   
+   }
+   .header-cont{
+       position: absolute;
+       width: 100%;
+       //height: 100%;
+       bottom: 100px;
+       left: 0;
+       z-index: 1;
+       text-align: center;
+       @media(max-width: 575px){
+           bottom: 5px;
+       }
+       h1{
+        color: #FFD28D;
+        font-family: "Baskervville", serif;
+        font-style: normal;
+        font-weight: 300;
+        padding-bottom: 40px;
+        font-size: 60px;
+        text-transform: uppercase;
+        display: unset;
+               @media(max-width: 575px){
+                   font-size: 30px;
+               }
+       }
+   }
+}
+
+
+  .all-rooms .rooms-main .rooms-grid .data-wrapper .gallery .image-gallery .photos .main-content .data-wrapper .estate-type {
+     
+      width: 100%;
+  }
+
+  
+
+  span.visually-hidden{
+    display: none;
+  }
+  .carousel-control-next, .carousel-control-prev{
+    z-index: 999;
+  }
+
+  .sticky-footer{
+    &{
+      @media(min-width: 576px){
+          display: none;
+      }
+  }
+    padding: 10px;
+    background-color: #040d10;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    height: auto;
+    border-top: 1px solid rgb(255, 210, 141);
+    .cont{
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      div{
+        svg{
+          width: 150px;
+          height: 60px;
+        }
+        p{
+          margin-bottom: 0;
+          color: rgb(255, 210, 141);
+          font-size: 16px;
+          font-family: "Prompt", sans-serif;
+          font-weight: 300;
+          display: block;
+          margin: 0 auto;
+         // opacity: 0.8;
+          margin-top: 8px;
+          @media(max-width: 575px){
+            display: none;
+          }
+        }
+        span{
+          @media(min-width: 576px){
+            display: none;
+          }
+        }
+        a{
+          margin-top: 16px;
+          color: #051114;
+          background-color: #FFD28D;
+          text-decoration: none;
+          font-family: "Prompt", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          display: block;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          width: -webkit-fit-content;
+          width: fit-content;
+          padding: 6px;
+          transition: all .2s ease-in-out;
+          
+          &:hover{
+           // color: #fff;
+            opacity: 0.8;
+          }
+          .fa{
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,40 @@
+.contact-main{
+    background-color: #051114;
+    padding-bottom: 80px;
+    .contact-cont{
+        padding-top: 80px;
+        max-width: 1300px;
+        margin: 0 auto;
+        p{
+            margin: 0;
+            text-align: center;
+            color: #fff;
+            display: block;
+            font-family: Prompt, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0 auto;
+            opacity: .8;
+            text-align: center;
+        
+        }
+        a{
+            color: #ffd28d;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: Prompt, sans-serif;
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+            font-family: Prompt, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            opacity: .8;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+
+}

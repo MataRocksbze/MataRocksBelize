@@ -1,0 +1,202 @@
+.restaurant-main{
+    .main-cont{
+        background-color: #051114;
+        padding-top: 80px;
+     
+      //  padding-bottom: 80px;
+        
+        .tours-slider{
+            button.slick-arrow.slick-next {
+                display: none!important;
+            }
+            .slider-container{
+                .slick-dots li button:before {
+                   border: 1px solid #FFD28D;
+                   color: unset!important;
+                   line-height: 19px;
+                   border-radius: 10px;
+                }
+                .slick-dots li.slick-active button:before{
+                    color: #FFD28D!important;
+                }
+                .tour-slide {
+                    position: relative;
+                    padding: 10px;
+                    z-index: 999;
+                    
+                    a{ 
+                       position: relative;
+                       display:  block;
+                       width: 100%;
+                       height: 100%;
+                       z-index: 9999;
+                       img{
+                        width: 100%;
+                       }
+
+                        &{
+                            &:hover{
+                                span{
+                                    //opacity: 1!important;
+                                }
+                            }
+                         }
+                         .gatsby-image-wrapper{
+                            z-index: -1;
+                         }
+
+                        .absolute-desc{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            z-index: 9;
+                            padding: 30px;
+                            
+                            span{
+                                background-color: #051114;
+                                height: 100%;
+                                width: fit-content;
+                                position: relative;
+                                display: block;
+                                padding: 35px 30px 35px 30px;
+                                transition: all .3s ease-in-out;
+                                opacity: 0;
+                                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                                h1{
+                                    font-family: "Baskervville", serif;
+                                    color: #FFD28D;
+                                    font-size: 25px;
+                                    font-style: italic;
+                                    font-weight: 400;
+                                }
+                                p{
+                                    color: #fff;
+                                    text-decoration: none;
+                                    font-family: "Prompt", sans-serif;
+                                    font-weight: 400;
+                                    font-style: normal;
+                                    text-transform: uppercase;
+                                    letter-spacing: 1px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menu-content{
+            background-image: url("../../images/foodbgNew.png");
+            background-position: center;
+            background-size: cover;
+          
+        }
+        .menu{
+            padding-top: 80px;
+            padding-bottom: 80px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding-left: 10px;
+            padding-right: 10px;
+           
+            h2{
+                color: #ffd28d;
+                font-family: Baskervville, serif;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: 400;
+                text-align: center;
+            }
+            h1{
+                color: #ffd28d;
+                font-family: Baskervville, sans-serif;
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 300;
+                text-transform: unset;
+                text-align: center;
+            }
+            span{
+                text-align: center;
+                color: #fff;
+                display: block;
+                font-family: Prompt, sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                margin: 0 auto;
+                opacity: .8;
+            }
+            .nav {
+                padding-top: 80px;
+                justify-content: center;
+            }
+            .nav-tabs{
+                border-bottom: none;
+            }
+            .nav-tabs .nav-link{
+                background-color: unset!important;
+                color: #FFD28D;
+                text-decoration: none;
+                font-family: "Prompt", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                cursor: pointer;
+            }
+            .nav-link.active {
+               // border-color: #ffd28d;
+            }
+            .nav-link:hover{
+                border-color: #ffd28d;
+            }
+            .menu-cont{
+                padding-top: 40px;
+                div#myTabContent {
+                    padding-top: 40px;
+                }
+                ul.menu-items{
+                    padding: 0;
+                    margin: 0;
+                    li.item{
+                        display: flex;
+                        justify-content: space-between;
+                        div{
+                            padding: 10px;
+                        }
+                        h3{
+                            color: #ffd28d;
+                            font-family: Prompt, sans-serif;
+                            font-style: normal;
+                            font-weight: 400;
+                            letter-spacing: 1px;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-size: 18px;
+                        }
+                        p{
+                            color: #fff;
+                            font-family: Prompt, sans-serif;
+                            font-style: normal;
+                            font-weight: 400;
+                            letter-spacing: 1px;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                        }
+                        hr{
+                            border-top: 1px solid rgba(255, 210, 141, 0.3);
+                            
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+                        div:nth-child(2){
+                            width: 100px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

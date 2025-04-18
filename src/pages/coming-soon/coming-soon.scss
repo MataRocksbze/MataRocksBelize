@@ -1,0 +1,36 @@
+.coming-soon{
+    background-color: #051114;
+    .main-cont{
+        max-width: 1300px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        h1{
+            color: #FFF;
+            font-family: "Baskervville", serif;
+            font-style: normal;
+            font-weight: 300;
+            padding-bottom: 40px;
+            font-size: 45px;
+            text-transform: uppercase;
+            display: unset;
+          
+        }
+        p{
+            color: #FFF;
+            font-size: 16px;
+            font-family: "Prompt", sans-serif;
+            font-weight: 300;
+            display: block;
+            margin: 0 auto;
+            opacity: 0.8;
+            margin-bottom: 5px;
+            padding-top: 20px;
+        
+        }
+        .gatsby-image-wrapper.gatsby-image-wrapper-constrained {
+            width: 189px;
+        }
+    }
+}
