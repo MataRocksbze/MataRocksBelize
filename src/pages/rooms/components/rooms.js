@@ -48,7 +48,7 @@ function Rooms() {
         <StaticImage
           src={headerImg}
           quality={60}
-          formats={["auto", "webp", "avif"]}
+          formats={["auto", "webp"]}
         />
         <div className="header-cont">
           <h1>All Rooms</h1>
@@ -70,7 +70,7 @@ function Rooms() {
                               
                                   <img src={blockMap.roomImage.image.url}
                                         quality={60}
-                                        formats={["auto", "webp", "avif", "png", "jpg"]}
+                                        formats={["auto", "webp", "png", "jpg"]}
                                         alt={blockMap.roomImage.imageAltText}
                                     />
 

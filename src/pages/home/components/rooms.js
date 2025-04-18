@@ -22,7 +22,7 @@ function Rooms() {
                       
                           <div className="estate-type">
                               <div className="image-field">
-                               <StaticImage alt="" src="../../../images/room001.jpg" quality={60} formats={["auto", "webp", "avif"]} />
+                               <StaticImage alt="" src="../../../images/room001.jpg" quality={60} formats={["auto", "webp"]} />
               
                                 
                                 <div className="overlay">
@@ -79,7 +79,7 @@ function Rooms() {
                       
                           <div className="estate-type">
                               <div className="image-field">
-                               <StaticImage alt="" src="../../../images/room002.jpg" quality={60} formats={["auto", "webp", "avif"]} />
+                               <StaticImage alt="" src="../../../images/room002.jpg" quality={60} formats={["auto", "webp"]} />
               
                                 
                                 <div className="overlay">
@@ -138,7 +138,7 @@ function Rooms() {
                       
                           <div className="estate-type">
                               <div className="image-field">
-                               <StaticImage alt="" src="../../../images/room003.jpg" quality={60} formats={["auto", "webp", "avif"]} />
+                               <StaticImage alt="" src="../../../images/room003.jpg" quality={60} formats={["auto", "webp"]} />
               
                                 
                                 <div className="overlay">
@@ -197,7 +197,7 @@ function Rooms() {
                       
                           <div className="estate-type">
                               <div className="image-field">
-                               <StaticImage alt="" src="../../../images/room004.jpg" quality={60} formats={["auto", "webp", "avif"]} />
+                               <StaticImage alt="" src="../../../images/room004.jpg" quality={60} formats={["auto", "webp"]} />
               
                                 
                                 <div className="overlay">

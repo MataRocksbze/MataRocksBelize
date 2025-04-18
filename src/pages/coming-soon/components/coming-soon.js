@@ -10,7 +10,7 @@ function Comingsoon() {
         <StaticImage
           src={headerImg}
           quality={60}
-          formats={["auto", "webp", "avif"]}
+          formats={["auto", "webp"]}
         />
         <div className="header-cont">
           <h1>Coming Soon</h1>

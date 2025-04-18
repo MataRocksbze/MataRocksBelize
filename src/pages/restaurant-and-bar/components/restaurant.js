@@ -93,7 +93,7 @@ function Restaurant({data}) {
         <div className="header-overlay"></div>
         <img src={about.headerImage.image.url}
                                         quality={60}
-                                        formats={["auto", "webp", "avif"]}
+                                        formats={["auto", "webp"]}
                                         alt={about.headerImage.imageAltText}
                     />
         <div className="header-cont">

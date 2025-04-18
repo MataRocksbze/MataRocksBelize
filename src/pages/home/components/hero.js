@@ -46,7 +46,7 @@ render={data => (
       <img src={galleryMap.image.url}
                     key={galleryMap.id}
                     quality={60}
-                    formats={["auto", "webp", "avif"]}
+                    formats={["auto", "webp"]}
                     placeholder="blurred"
                     alt={galleryMap.imageAltText}/> 
        </Carousel.Item>
