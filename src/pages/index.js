@@ -6,7 +6,7 @@ import { Row, Col, Button, Container } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Hero from "./home/components/hero"
+import Hero from "./home/components/hero"    
 
 import Welcome from "./home/components/welcome"
 import Rooms from "./rooms/components/rooms"
