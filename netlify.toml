@@ -1,2 +1,2 @@
 [build]
-command = "rm -rf /opt/build/cache && npm run build"
+command = "npm run build"
