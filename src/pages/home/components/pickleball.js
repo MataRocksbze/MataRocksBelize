@@ -1,19 +1,46 @@
-import React from 'react'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 function Pickleball() {
+  // Fetch data using a GraphQL query
+  const data = useStaticQuery(graphql`
+    query PickleballQuery {
+      allGraphCmsHomePickleball {
+        edges {
+          node {
+            title1
+            title2White
+            title3Gold
+            title2BWhite
+            content {
+              html
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  // Get the first node (assuming you're fetching only one item)
+  const pickleData = data.allGraphCmsHomePickleball.edges[0].node;
+
   return (
-    <div className='pickleball-main'>
-       <div className='main-cont'>
-         <span>A unique twist!</span>
-         <h1>Home to the only <span>Pickleball Court</span><br /> in San Pedro Belize.</h1>
-         <p>Looking for an extra spark of excitement during your tropical getaway? Mata Rocks Resort boasts the only pickleball court in the area! Whether you're a seasoned pro or new to the game, this lively activity adds a unique twist to your island experience, making your stay as active and fun as it is relaxing.</p>
-         <a href="/pickle-ball" className="all-button">Read More</a>
-       </div>
+    <div className="pickleball-main">
+      <div className="main-cont">
+        <span>{pickleData.title1}</span>
+        <h1>
+          {pickleData.title2White} <span>{pickleData.title3Gold}</span>
+          <br />
+          {pickleData.title2BWhite}
+        </h1>
+        <div dangerouslySetInnerHTML={{ __html: pickleData.content.html }} />
+        <a href="/pickle-ball" className="all-button">Read More</a>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Pickleball
+export default Pickleball;
 
 {/*import React from 'react'
 import { graphql, Link, StaticQuery } from "gatsby"
