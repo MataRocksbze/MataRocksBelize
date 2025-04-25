@@ -1,2 +1,2 @@
 [build]
-command = "gatsby clean && npm run build"
+command = "npm run build"
