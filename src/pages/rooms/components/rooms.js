@@ -34,13 +34,32 @@ function Rooms() {
                     url
                   }
                 }
+                roomOrder # ADD THIS LINE
               }
             }
           }
       }
-    
+
   `);
 
+// Log original unsorted order
+console.log("Original Rooms:", data.allGraphCmsRooms.edges.map(room => ({
+  title: room.node.roomTitle,
+  order: room.node.roomOrder
+})));
+
+// Sort the rooms based on roomOrder
+const sortedRooms = data.allGraphCmsRooms.edges.sort((a, b) => {
+  const orderA = parseFloat(a.node.roomOrder);
+  const orderB = parseFloat(b.node.roomOrder);
+  return orderA - orderB;
+});
+
+// Log sorted order
+console.log("Sorted Rooms:", sortedRooms.map(room => ({
+  title: room.node.roomTitle,
+  order: room.node.roomOrder
+})));
   return (
     <div className="all-rooms">
       <div className="content-header">
@@ -56,23 +75,23 @@ function Rooms() {
       </div>
       <div className="rooms-main">
         <div className="rooms-grid">
-        
+
             <div className="data-wrapper">
               <div className="gallery">
                 <div className="image-gallery">
                   <div className="photos">
-                  {data.allGraphCmsRooms.edges.map(({ node: blockMap }) => (
-                    <div>
+                  {sortedRooms.map(({ node: blockMap }) => (  // Use sortedRooms here
+                    <div key={blockMap.id}> {/* Add a key to the parent div */}
                       <div className="main-content">
                         <div className="data-wrapper">
                           <div className="estate-type">
                             <div className="image-field">
-                              
-                                  <img src={blockMap.roomImage.image.url}
-                                        quality={60}
-                                        formats={["auto", "webp", "png", "jpg"]}
-                                        alt={blockMap.roomImage.imageAltText}
-                                    />
+
+                                <img src={blockMap.roomImage.image.url}
+                                      quality={60}
+                                      formats={["auto", "webp", "png", "jpg"]}
+                                      alt={blockMap.roomImage.imageAltText}
+                                  />
 
                               <div className="overlay">
                                 <div className="content">
@@ -81,16 +100,16 @@ function Rooms() {
                                       <div className="desc">
                                         <div className="desc-main">
                                           <h2>{blockMap.roomTitle}</h2>
-                                       
+
                                         </div>
                                         <div className="secondary-cont">
                                           <p>
-                                            
+
                                             <div className="blurb" dangerouslySetInnerHTML={{ __html:blockMap.description.html}} />
-                                           
+
                                             <br />
                                             - {blockMap.adultCount} Adults <br />
-                                            - {blockMap.adultCount} Children
+                                            - {blockMap.childCount} Children {/* Corrected typo here */}
                                             <br />
                                             - {blockMap.bedCount} Beds
                                             <br />
@@ -102,7 +121,7 @@ function Rooms() {
                                         </div>
                                         <div className="book-now-block">
                                         <a href={`${blockMap.cloudbedsLink}`} target="_blank" className="book-button">Book Now </a>
-                                       
+
                                         </div>
                                       </div>
                                     </div>
@@ -119,7 +138,7 @@ function Rooms() {
                 </div>
               </div>
             </div>
-         
+
         </div>
       </div>
       <a class="all-button" href="/rooms">View All Rooms</a>
@@ -128,5 +147,3 @@ function Rooms() {
 }
 
 export default Rooms;
-
- 
